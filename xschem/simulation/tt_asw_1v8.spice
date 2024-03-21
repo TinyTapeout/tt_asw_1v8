@@ -1,12 +1,11 @@
 ** sch_path: /home/matt/work/asic-workshop/shuttle-2404/tt-analog-switch/xschem/tt_asw_1v8.sch
 .subckt tt_asw_1v8 VPWR VGND mod bus ctrl
 *.PININFO VPWR:B VGND:B mod:B bus:B ctrl:I
-XM3 bus tgon mod VGND sky130_fd_pr__nfet_01v8 L=0.5 W=10 nf=1 m=1
-XM4A bus tgon_n mod VPWR sky130_fd_pr__pfet_01v8 L=0.5 W=10 nf=1 m=1
-XM4B bus tgon_n mod VPWR sky130_fd_pr__pfet_01v8 L=0.5 W=10 nf=1 m=1
-XM1 tgon tgon_n VGND VGND sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1 m=1
-XM2 tgon tgon_n VPWR VPWR sky130_fd_pr__pfet_01v8 L=0.5 W=2 nf=1 m=1
-XM5 tgon_n ctrl VGND VGND sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1 m=1
-XM4 tgon_n ctrl VPWR VPWR sky130_fd_pr__pfet_01v8 L=0.5 W=2 nf=1 m=1
+XM3 bus tgon mod VGND sky130_fd_pr__nfet_01v8 L=0.15 W=10 nf=4 m=1
+XM4A bus tgon_n mod VPWR sky130_fd_pr__pfet_01v8 L=0.15 W=20 nf=8 m=1
+XM1 tgon tgon_n VGND VGND sky130_fd_pr__nfet_01v8 L=0.15 W=2.5 nf=1 m=1
+XM2 tgon tgon_n VPWR VPWR sky130_fd_pr__pfet_01v8 L=0.15 W=5 nf=2 m=1
+XM5 tgon_n ctrl VGND VGND sky130_fd_pr__nfet_01v8 L=0.15 W=2.5 nf=1 m=1
+XM4 tgon_n ctrl VPWR VPWR sky130_fd_pr__pfet_01v8 L=0.15 W=5 nf=2 m=1
 .ends
 .end

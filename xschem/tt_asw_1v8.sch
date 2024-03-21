@@ -36,21 +36,7 @@ lab=bus}
 N 960 -740 960 -640 {
 lab=mod}
 N 680 -420 1000 -420 { lab=VGND}
-N 900 -880 900 -840 {
-lab=VPWR}
-N 900 -840 1000 -840 {
-lab=VPWR}
-N 930 -880 960 -880 {
-lab=mod}
-N 960 -880 960 -740 {
-lab=mod}
-N 840 -880 870 -880 {
-lab=bus}
-N 840 -880 840 -740 {
-lab=bus}
-N 1000 -840 1000 -700 {
-lab=VPWR}
-N 1000 -980 1000 -840 {
+N 1000 -980 1000 -700 {
 lab=VPWR}
 N 600 -520 600 -420 {
 lab=VGND}
@@ -66,10 +52,6 @@ N 680 -980 680 -810 {
 lab=VPWR}
 N 520 -810 560 -810 {
 lab=tgon_n}
-N 900 -940 900 -920 {
-lab=tgon_n}
-N 760 -940 900 -940 {
-lab=tgon_n}
 N 760 -800 760 -740 {
 lab=tgon_n}
 N 900 -800 900 -780 {
@@ -78,21 +60,19 @@ N 760 -800 900 -800 {
 lab=tgon_n}
 N 900 -520 900 -500 {
 lab=tgon}
-N 440 -980 600 -980 { lab=VPWR}
+N 500 -980 600 -980 { lab=VPWR}
 N 600 -980 680 -980 { lab=VPWR}
-N 760 -940 760 -800 {
-lab=tgon_n}
-N 450 -420 600 -420 { lab=VGND}
+N 500 -420 600 -420 { lab=VGND}
 N 600 -420 680 -420 { lab=VGND}
 N 350 -810 390 -810 {
 lab=ctrl}
-N 350 -810 350 -710 {
+N 350 -810 350 -700 {
 lab=ctrl}
-N 350 -710 350 -550 {
+N 350 -700 350 -550 {
 lab=ctrl}
 N 700 -640 840 -640 {
 lab=bus}
-N 600 -780 600 -580 {
+N 600 -600 600 -580 {
 lab=tgon}
 N 770 -500 900 -500 {
 lab=tgon}
@@ -100,23 +80,23 @@ N 600 -600 770 -600 {
 lab=tgon}
 N 770 -600 770 -500 {
 lab=tgon}
-N 350 -980 440 -980 {
+N 430 -980 500 -980 {
 lab=VPWR}
 N 430 -980 430 -840 {
 lab=VPWR}
-N 430 -780 430 -580 {
+N 430 -740 430 -580 {
 lab=tgon_n}
 N 350 -550 390 -550 {
 lab=ctrl}
 N 520 -810 520 -740 {
 lab=tgon_n}
-N 430 -740 760 -740 {
+N 520 -740 760 -740 {
 lab=tgon_n}
 N 520 -740 520 -550 {
 lab=tgon_n}
 N 520 -550 560 -550 {
 lab=tgon_n}
-N 310 -420 450 -420 {
+N 430 -420 500 -420 {
 lab=VGND}
 N 430 -520 430 -420 {
 lab=VGND}
@@ -128,14 +108,25 @@ N 430 -810 500 -810 {
 lab=VPWR}
 N 500 -980 500 -810 {
 lab=VPWR}
-N 320 -700 350 -700 {}
+N 320 -700 350 -700 {
+lab=ctrl}
+N 600 -780 600 -600 {
+lab=tgon}
+N 350 -980 430 -980 {
+lab=VPWR}
+N 430 -740 520 -740 {
+lab=tgon_n}
+N 310 -420 430 -420 {
+lab=VGND}
+N 430 -780 430 -740 {
+lab=tgon_n}
 C {devices/iopin.sym} 350 -980 2 0 {name=p1 lab=VPWR}
 C {devices/iopin.sym} 310 -420 2 0 {name=p2 lab=VGND}
 C {devices/title.sym} 160 -30 0 0 {name=l1 author="Harald Pretl"}
 C {sky130_fd_pr/nfet_01v8.sym} 900 -540 3 0 {name=M3
-L=0.5
+L=0.15
 W=10
-nf=1 
+nf=4
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -147,9 +138,9 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 900 -760 1 0 {name=M4A
-L=0.5
-W=10
-nf=1
+L=0.15
+W=20
+nf=8
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -162,23 +153,9 @@ spiceprefix=X
 }
 C {devices/iopin.sym} 1080 -640 0 0 {name=p6 lab=mod}
 C {devices/iopin.sym} 700 -640 0 1 {name=p7 lab=bus}
-C {sky130_fd_pr/pfet_01v8.sym} 900 -900 1 0 {name=M4B
-L=0.5
-W=10
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
 C {sky130_fd_pr/nfet_01v8.sym} 580 -550 0 0 {name=M1
-L=0.5
-W=1
+L=0.15
+W=2.5
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -191,9 +168,9 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 580 -810 0 0 {name=M2
-L=0.5
-W=2
-nf=1
+L=0.15
+W=5
+nf=2
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -208,8 +185,8 @@ C {devices/lab_wire.sym} 700 -740 0 0 {name=p3 sig_type=std_logic lab=tgon_n}
 C {devices/lab_wire.sym} 700 -600 0 0 {name=p4 sig_type=std_logic lab=tgon}
 C {devices/ipin.sym} 320 -700 2 1 {name=p5 lab=ctrl}
 C {sky130_fd_pr/nfet_01v8.sym} 410 -550 0 0 {name=M5
-L=0.5
-W=1
+L=0.15
+W=2.5
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -222,9 +199,9 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 410 -810 0 0 {name=M4
-L=0.5
-W=2
-nf=1
+L=0.15
+W=5
+nf=2
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
