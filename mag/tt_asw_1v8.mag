@@ -1,0 +1,86 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1711020140
+<< metal3 >>
+rect 120 4346 360 4352
+rect 120 2358 126 4346
+rect 354 2358 360 4346
+rect 890 4172 950 4352
+rect 1750 4346 1930 4352
+rect 1750 3958 1756 4346
+rect 1924 3958 1930 4346
+rect 1750 3952 1930 3958
+rect 3320 4346 3560 4352
+rect 120 2352 360 2358
+rect 1750 2746 1930 2752
+rect 1750 2358 1756 2746
+rect 1924 2358 1930 2746
+rect 1750 2352 1930 2358
+rect 3320 2358 3326 4346
+rect 3554 2358 3560 4346
+rect 3320 2352 3560 2358
+<< via3 >>
+rect 126 2358 354 4346
+rect 1756 3958 1924 4346
+rect 1756 2358 1924 2746
+rect 3326 2358 3554 4346
+<< metal4 >>
+rect 120 4346 360 4352
+rect 120 2358 126 4346
+rect 354 2358 360 4346
+rect 1750 4346 1930 4352
+rect 1750 3958 1756 4346
+rect 1924 3958 1930 4346
+rect 1750 3952 1930 3958
+rect 3320 4346 3560 4352
+rect 120 0 360 2358
+rect 1750 2746 1930 2752
+rect 1750 2358 1756 2746
+rect 1924 2358 1930 2746
+rect 1750 2352 1930 2358
+rect 3320 2358 3326 4346
+rect 3554 2358 3560 4346
+rect 3320 0 3560 2358
+use sky130_fd_pr__nfet_01v8_PVEW3M  XM1
+timestamp 1711020140
+transform 1 0 1560 0 1 1642
+box -246 -310 246 310
+use sky130_fd_pr__pfet_01v8_XPB8Y6  XM2
+timestamp 1711020140
+transform 1 0 1624 0 1 673
+box -246 -419 246 419
+use sky130_fd_pr__nfet_01v8_8UEWKQ  XM3
+timestamp 1711020140
+transform 1 0 884 0 1 1754
+box -246 -1210 246 1210
+use sky130_fd_pr__pfet_01v8_XPB8Y6  XM4
+timestamp 1711020140
+transform 1 0 2827 0 1 648
+box -246 -419 246 419
+use sky130_fd_pr__pfet_01v8_XPMKZ5  XM4A
+timestamp 1711020140
+transform 1 0 1488 0 1 3327
+box -246 -1219 246 1219
+use sky130_fd_pr__pfet_01v8_XPMKZ5  XM4B
+timestamp 1711020140
+transform 1 0 2822 0 1 3313
+box -246 -1219 246 1219
+use sky130_fd_pr__nfet_01v8_PVEW3M  XM5
+timestamp 1711020140
+transform 1 0 2322 0 1 626
+box -246 -310 246 310
+<< labels >>
+flabel metal4 120 0 360 4352 0 FreeSans 320 0 0 0 VGND
+port 1 n ground input
+flabel metal4 3320 0 3560 4352 0 FreeSans 320 0 0 0 VPWR
+port 2 n power input
+flabel metal4 1750 3952 1930 4352 0 FreeSans 320 0 0 0 mod
+port 3 n analog bidirectional
+flabel metal4 1750 2352 1930 2752 0 FreeSans 320 0 0 0 bus
+port 4 n analog bidirectional
+flabel metal3 890 4172 950 4352 0 FreeSans 320 0 0 0 ctrl
+port 5 n signal input
+<< properties >>
+string FIXED_BBOX 0 0 3680 4352
+<< end >>
