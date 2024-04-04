@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 570 -380 1370 20 {flags=graph
-y1=-0.0048
+y1=0
 y2=1.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.3420818e-07
-x2=1.0697516e-06
+x1=8.7392494e-07
+x2=1.1316225e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -36,8 +36,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.3420818e-07
-x2=1.0697516e-06
+x1=8.7392494e-07
+x2=1.1316225e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -76,6 +76,35 @@ dataset=-1
 sim_type=dc
 color=4
 node="\\"resistance;mod_r bus - 100u /\\""}
+B 2 560 1040 1360 1440 {flags=graph,unlocked
+y1=-0.0097
+y2=-4.2e-10
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=6.3655518
+x2=8.541617
+divx=5
+subdivx=8
+xlabmag=1.0
+ylabmag=1.0
+
+
+
+unitx=1
+logx=1
+logy=0
+
+
+
+dataset=-1
+rawfile=$netlist_dir/testbench_ac.raw
+
+sim_type=ac
+color=4
+node="\\"out_ac db20()\\""}
 N 290 -270 310 -270 {
 lab=bus_out}
 N 310 -270 330 -270 {
@@ -156,6 +185,22 @@ N 220 750 270 750 {
 lab=bus}
 N 350 730 350 790 {
 lab=mod_r}
+N 260 1310 330 1310 {
+lab=out_ac}
+N 260 1270 270 1270 {
+lab=vdd}
+N 260 1330 270 1330 {
+lab=vss}
+N 260 1290 270 1290 {
+lab=mod_ac}
+N -50 1270 -40 1270 {
+lab=vdd}
+N 370 1220 370 1240 {
+lab=GND}
+N 340 1140 370 1140 {
+lab=mod_ac}
+N 370 1140 370 1160 {
+lab=mod_ac}
 C {tt_asw_1v8.sym} 10 -280 0 0 {name=x1}
 C {devices/code.sym} 350 -560 0 0 {name=TT_MODELS
 only_toplevel=true
@@ -175,13 +220,16 @@ value="
 .control
 save all
 tran 500p 2u uic
-set appendwrite
 write testbench.raw
 reset
 save all 
-set appendwrite
 dc Vcm 0 1.8 0.01
+remzerovec
 write testbench_dc.raw
+
+ac dec 10 1 200e6
+remzerovec
+write testbench_ac.raw
 
 *quit 0
 .endc
@@ -275,7 +323,16 @@ C {devices/gnd.sym} 270 830 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} -160 710 2 1 {name=p20 sig_type=std_logic lab=vdd
 }
 C {devices/lab_wire.sym} 230 750 0 0 {name=p21 sig_type=std_logic lab=bus}
-C {devices/launcher.sym} 360 580 0 0 {name=h1
-descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/testbench_dc.raw dc"
+C {devices/lab_pin.sym} 270 1270 2 0 {name=p23 sig_type=std_logic lab=vdd
 }
+C {devices/lab_pin.sym} 270 1330 0 1 {name=p24 sig_type=std_logic lab=vss
+}
+C {devices/lab_pin.sym} 270 1290 2 0 {name=p25 sig_type=std_logic lab=mod_ac
+}
+C {devices/vsource.sym} 370 1190 0 0 {name=V3 value="ac 1 0" savecurrent=false}
+C {devices/gnd.sym} 370 1240 0 0 {name=l6 lab=GND}
+C {devices/lab_pin.sym} 340 1140 0 0 {name=p27 sig_type=std_logic lab=mod_ac}
+C {devices/lab_pin.sym} -50 1270 0 0 {name=p26 sig_type=std_logic lab=vdd
+}
+C {tt_asw_1v8.sym} 110 1300 0 0 {name=x4}
+C {devices/iopin.sym} 330 1310 0 0 {name=p28 lab=out_ac}
