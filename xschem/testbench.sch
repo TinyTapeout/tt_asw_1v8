@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.1591469e-07
-x2=1.0895079e-06
+x1=7.3420818e-07
+x2=1.0697516e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -30,14 +30,14 @@ node="bus_out
 ctrl"}
 B 2 560 110 1360 510 {flags=graph
 y1=0
-y2=2
+y2=1.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.1591469e-07
-x2=1.0895079e-06
+x1=7.3420818e-07
+x2=1.0697516e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -50,6 +50,32 @@ unitx=1
 logx=0
 logy=0
 }
+B 2 560 580 1360 980 {flags=graph,unlocked
+y1=35
+y2=84
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=1.8
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/testbench_dc.raw
+
+dataset=-1
+sim_type=dc
+color=4
+node="\\"resistance;mod_r bus - 100u /\\""}
 N 290 -270 310 -270 {
 lab=bus_out}
 N 310 -270 330 -270 {
@@ -102,6 +128,34 @@ N 160 -120 170 -120 {
 lab=mod}
 N -150 -140 -140 -140 {
 lab=ctrl}
+N 150 750 220 750 {
+lab=bus}
+N 150 710 160 710 {
+lab=vdd}
+N 150 770 160 770 {
+lab=GND}
+N 350 880 350 900 {
+lab=GND}
+N 150 730 160 730 {
+lab=mod_r}
+N -160 710 -150 710 {
+lab=vdd}
+N 170 770 170 790 {
+lab=GND}
+N 160 770 170 770 {
+lab=GND}
+N 350 790 350 820 {
+lab=mod_r}
+N 350 670 350 730 {
+lab=mod_r}
+N 350 670 390 670 {
+lab=mod_r}
+N 270 810 270 830 {
+lab=GND}
+N 220 750 270 750 {
+lab=bus}
+N 350 730 350 790 {
+lab=mod_r}
 C {tt_asw_1v8.sym} 10 -280 0 0 {name=x1}
 C {devices/code.sym} 350 -560 0 0 {name=TT_MODELS
 only_toplevel=true
@@ -114,13 +168,21 @@ value="
 
 "
 spice_ignore=false}
-C {devices/code.sym} 190 -560 0 0 {name=SIMULATION
+C {devices/code.sym} 200 -560 0 0 {name=SIMULATION
 only_toplevel=false 
 value="
 .param mc_mm_switch=0
 .control
+save all
 tran 500p 2u uic
+set appendwrite
 write testbench.raw
+reset
+save all 
+set appendwrite
+dc Vcm 0 1.8 0.01
+write testbench_dc.raw
+
 *quit 0
 .endc
 .end
@@ -198,4 +260,22 @@ C {devices/lab_pin.sym} -150 -140 0 0 {name=p13 sig_type=std_logic lab=ctrl
 
 }
 C {devices/lab_pin.sym} 310 -30 0 1 {name=p14 sig_type=std_logic lab=vss
+}
+C {tt_asw_1v8.sym} 0 740 0 0 {name=x3}
+C {devices/lab_pin.sym} 160 710 2 0 {name=p15 sig_type=std_logic lab=vdd
+}
+C {devices/gnd.sym} 170 790 0 0 {name=l1 lab=GND}
+C {devices/vsource.sym} 350 850 0 0 {name=Vcm value="1V" savecurrent=false}
+C {devices/gnd.sym} 350 900 0 0 {name=l4 lab=GND}
+C {devices/lab_pin.sym} 390 670 0 1 {name=p18 sig_type=std_logic lab=mod_r}
+C {devices/lab_pin.sym} 160 730 2 0 {name=p19 sig_type=std_logic lab=mod_r
+}
+C {devices/isource.sym} 270 780 0 0 {name=I0 value=100u savecurrent=true}
+C {devices/gnd.sym} 270 830 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} -160 710 2 1 {name=p20 sig_type=std_logic lab=vdd
+}
+C {devices/lab_wire.sym} 230 750 0 0 {name=p21 sig_type=std_logic lab=bus}
+C {devices/launcher.sym} 360 580 0 0 {name=h1
+descr="load waves" 
+tclcommand="xschem raw_read $netlist_dir/testbench_dc.raw dc"
 }
