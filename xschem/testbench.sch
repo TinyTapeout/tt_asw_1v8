@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.7392494e-07
-x2=1.1316225e-06
+x1=5e-12
+x2=2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -36,8 +36,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.7392494e-07
-x2=1.1316225e-06
+x1=5e-12
+x2=2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -51,8 +51,8 @@ logx=0
 logy=0
 }
 B 2 560 580 1360 980 {flags=graph,unlocked
-y1=35
-y2=84
+y1=170
+y2=610
 ypos1=0
 ypos2=2
 divy=5
@@ -77,15 +77,15 @@ sim_type=dc
 color=4
 node="\\"resistance;mod_r bus - 100u /\\""}
 B 2 560 1040 1360 1440 {flags=graph,unlocked
-y1=-0.0097
-y2=-4.2e-10
+y1=-0.0037
+y2=-7.4e-09
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=6.3655518
-x2=8.541617
+x1=0
+x2=8.30103
 divx=5
 subdivx=8
 xlabmag=1.0
@@ -309,7 +309,10 @@ C {devices/lab_pin.sym} -150 -140 0 0 {name=p13 sig_type=std_logic lab=ctrl
 }
 C {devices/lab_pin.sym} 310 -30 0 1 {name=p14 sig_type=std_logic lab=vss
 }
-C {tt_asw_1v8.sym} 0 740 0 0 {name=x3}
+C {tt_asw_1v8.sym} 0 740 0 0 {name=x3
+schematic=tt_asw_1v8_parax.sim
+spice_sym_def="tcleval(.include [file normalize ../mag/tt_asw_1v8.sim.spice])"
+tclcommand="textwindow [file normalize ../mag/tt_asw_1v8.sim.spice]"}
 C {devices/lab_pin.sym} 160 710 2 0 {name=p15 sig_type=std_logic lab=vdd
 }
 C {devices/gnd.sym} 170 790 0 0 {name=l1 lab=GND}
@@ -334,5 +337,8 @@ C {devices/gnd.sym} 370 1240 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 340 1140 0 0 {name=p27 sig_type=std_logic lab=mod_ac}
 C {devices/lab_pin.sym} -50 1270 0 0 {name=p26 sig_type=std_logic lab=vdd
 }
-C {tt_asw_1v8.sym} 110 1300 0 0 {name=x4}
+C {tt_asw_1v8.sym} 110 1300 0 0 {name=x4
+schematic=tt_asw_1v8_parax.sim
+spice_sym_def="tcleval(.include [file normalize ../mag/tt_asw_1v8.sim.spice])"
+tclcommand="textwindow [file normalize ../mag/tt_asw_1v8.sim.spice]"}
 C {devices/iopin.sym} 330 1310 0 0 {name=p28 lab=out_ac}
