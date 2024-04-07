@@ -5,7 +5,7 @@ K {}
 V {}
 S {}
 E {}
-B 2 570 -380 1370 20 {flags=graph
+B 2 570 -380 1370 20 {flags=graph,unlocked
 y1=0
 y2=1.8
 ypos1=0
@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=5e-12
-x2=2e-06
+x1=8.8964188e-07
+x2=1.0270809e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -25,34 +25,13 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-color="6 4"
+color="6 10 6"
 node="bus_out
+bus_out_parax
 ctrl"}
-B 2 560 110 1360 510 {flags=graph
-y1=0
-y2=1.8
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=5e-12
-x2=2e-06
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="ctrl
-bus_out_parax"
-color="4 6"
-dataset=-1
-unitx=1
-logx=0
-logy=0
-}
-B 2 560 580 1360 980 {flags=graph,unlocked
-y1=170
-y2=610
+B 2 570 130 1370 530 {flags=graph,unlocked
+y1=50
+y2=96
 ypos1=0
 ypos2=2
 divy=5
@@ -76,16 +55,16 @@ dataset=-1
 sim_type=dc
 color=4
 node="\\"resistance;mod_r bus - 100u /\\""}
-B 2 560 1040 1360 1440 {flags=graph,unlocked
-y1=-0.0037
-y2=-7.4e-09
+B 2 570 610 1370 1010 {flags=graph,unlocked
+
+y2=-4.4e-09
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=8.30103
+x1=7
+x2=9
 divx=5
 subdivx=8
 xlabmag=1.0
@@ -104,7 +83,8 @@ rawfile=$netlist_dir/testbench_ac.raw
 
 sim_type=ac
 color=4
-node="\\"out_ac db20()\\""}
+node="\\"out_ac db20()\\""
+y1=-0.0038}
 N 290 -270 310 -270 {
 lab=bus_out}
 N 310 -270 330 -270 {
@@ -157,49 +137,49 @@ N 160 -120 170 -120 {
 lab=mod}
 N -150 -140 -140 -140 {
 lab=ctrl}
-N 150 750 220 750 {
+N 70 350 140 350 {
 lab=bus}
-N 150 710 160 710 {
+N 70 310 80 310 {
 lab=vdd}
-N 150 770 160 770 {
+N 70 370 80 370 {
 lab=GND}
-N 350 880 350 900 {
+N 360 460 360 480 {
 lab=GND}
-N 150 730 160 730 {
+N 70 330 80 330 {
 lab=mod_r}
-N -160 710 -150 710 {
+N -240 310 -230 310 {
 lab=vdd}
-N 170 770 170 790 {
+N 90 370 90 390 {
 lab=GND}
-N 160 770 170 770 {
+N 80 370 90 370 {
 lab=GND}
-N 350 790 350 820 {
+N 360 370 360 400 {
 lab=mod_r}
-N 350 670 350 730 {
+N 360 250 360 310 {
 lab=mod_r}
-N 350 670 390 670 {
+N 360 250 400 250 {
 lab=mod_r}
-N 270 810 270 830 {
+N 190 410 190 430 {
 lab=GND}
-N 220 750 270 750 {
+N 140 350 190 350 {
 lab=bus}
-N 350 730 350 790 {
+N 360 310 360 370 {
 lab=mod_r}
-N 260 1310 330 1310 {
+N 90 750 160 750 {
 lab=out_ac}
-N 260 1270 270 1270 {
+N 90 710 100 710 {
 lab=vdd}
-N 260 1330 270 1330 {
+N 90 770 100 770 {
 lab=vss}
-N 260 1290 270 1290 {
+N 90 730 100 730 {
 lab=mod_ac}
-N -50 1270 -40 1270 {
+N -220 710 -210 710 {
 lab=vdd}
-N 370 1220 370 1240 {
+N 200 660 200 680 {
 lab=GND}
-N 340 1140 370 1140 {
+N 170 580 200 580 {
 lab=mod_ac}
-N 370 1140 370 1160 {
+N 200 580 200 600 {
 lab=mod_ac}
 C {tt_asw_1v8.sym} 10 -280 0 0 {name=x1}
 C {devices/code.sym} 350 -560 0 0 {name=TT_MODELS
@@ -309,36 +289,36 @@ C {devices/lab_pin.sym} -150 -140 0 0 {name=p13 sig_type=std_logic lab=ctrl
 }
 C {devices/lab_pin.sym} 310 -30 0 1 {name=p14 sig_type=std_logic lab=vss
 }
-C {tt_asw_1v8.sym} 0 740 0 0 {name=x3
+C {tt_asw_1v8.sym} -80 340 0 0 {name=x3
 schematic=tt_asw_1v8_parax.sim
 spice_sym_def="tcleval(.include [file normalize ../mag/tt_asw_1v8.sim.spice])"
 tclcommand="textwindow [file normalize ../mag/tt_asw_1v8.sim.spice]"}
-C {devices/lab_pin.sym} 160 710 2 0 {name=p15 sig_type=std_logic lab=vdd
+C {devices/lab_pin.sym} 80 310 2 0 {name=p15 sig_type=std_logic lab=vdd
 }
-C {devices/gnd.sym} 170 790 0 0 {name=l1 lab=GND}
-C {devices/vsource.sym} 350 850 0 0 {name=Vcm value="1V" savecurrent=false}
-C {devices/gnd.sym} 350 900 0 0 {name=l4 lab=GND}
-C {devices/lab_pin.sym} 390 670 0 1 {name=p18 sig_type=std_logic lab=mod_r}
-C {devices/lab_pin.sym} 160 730 2 0 {name=p19 sig_type=std_logic lab=mod_r
+C {devices/gnd.sym} 90 390 0 0 {name=l1 lab=GND}
+C {devices/vsource.sym} 360 430 0 0 {name=Vcm value="1V" savecurrent=false}
+C {devices/gnd.sym} 360 480 0 0 {name=l4 lab=GND}
+C {devices/lab_pin.sym} 400 250 0 1 {name=p18 sig_type=std_logic lab=mod_r}
+C {devices/lab_pin.sym} 80 330 2 0 {name=p19 sig_type=std_logic lab=mod_r
 }
-C {devices/isource.sym} 270 780 0 0 {name=I0 value=100u savecurrent=true}
-C {devices/gnd.sym} 270 830 0 0 {name=l5 lab=GND}
-C {devices/lab_pin.sym} -160 710 2 1 {name=p20 sig_type=std_logic lab=vdd
+C {devices/isource.sym} 190 380 0 0 {name=I0 value=100u savecurrent=true}
+C {devices/gnd.sym} 190 430 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} -240 310 2 1 {name=p20 sig_type=std_logic lab=vdd
 }
-C {devices/lab_wire.sym} 230 750 0 0 {name=p21 sig_type=std_logic lab=bus}
-C {devices/lab_pin.sym} 270 1270 2 0 {name=p23 sig_type=std_logic lab=vdd
+C {devices/lab_wire.sym} 150 350 0 0 {name=p21 sig_type=std_logic lab=bus}
+C {devices/lab_pin.sym} 100 710 2 0 {name=p23 sig_type=std_logic lab=vdd
 }
-C {devices/lab_pin.sym} 270 1330 0 1 {name=p24 sig_type=std_logic lab=vss
+C {devices/lab_pin.sym} 100 770 0 1 {name=p24 sig_type=std_logic lab=vss
 }
-C {devices/lab_pin.sym} 270 1290 2 0 {name=p25 sig_type=std_logic lab=mod_ac
+C {devices/lab_pin.sym} 100 730 2 0 {name=p25 sig_type=std_logic lab=mod_ac
 }
-C {devices/vsource.sym} 370 1190 0 0 {name=V3 value="ac 1 0" savecurrent=false}
-C {devices/gnd.sym} 370 1240 0 0 {name=l6 lab=GND}
-C {devices/lab_pin.sym} 340 1140 0 0 {name=p27 sig_type=std_logic lab=mod_ac}
-C {devices/lab_pin.sym} -50 1270 0 0 {name=p26 sig_type=std_logic lab=vdd
+C {devices/vsource.sym} 200 630 0 0 {name=V3 value="ac 1 0" savecurrent=false}
+C {devices/gnd.sym} 200 680 0 0 {name=l6 lab=GND}
+C {devices/lab_pin.sym} 170 580 0 0 {name=p27 sig_type=std_logic lab=mod_ac}
+C {devices/lab_pin.sym} -220 710 0 0 {name=p26 sig_type=std_logic lab=vdd
 }
-C {tt_asw_1v8.sym} 110 1300 0 0 {name=x4
+C {tt_asw_1v8.sym} -60 740 0 0 {name=x4
 schematic=tt_asw_1v8_parax.sim
 spice_sym_def="tcleval(.include [file normalize ../mag/tt_asw_1v8.sim.spice])"
 tclcommand="textwindow [file normalize ../mag/tt_asw_1v8.sim.spice]"}
-C {devices/iopin.sym} 330 1310 0 0 {name=p28 lab=out_ac}
+C {devices/iopin.sym} 160 750 0 0 {name=p28 lab=out_ac}

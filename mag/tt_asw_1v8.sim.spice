@@ -1,74 +1,40 @@
 * NGSPICE file created from tt_asw_1v8_parax.ext - technology: sky130A
 
 .subckt tt_asw_1v8_parax VGND VPWR mod bus ctrl
-X0 VPWR.t28 ctrl.t0 a_264_2813.t1 VPWR.t27 sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=1.5 l=0.15
-**devattr s=9900,366 d=18600,724
-X1 mod.t20 a_264_2813.t3 bus.t19 VPWR.t24 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X2 bus.t14 a_264_2813.t4 mod.t19 VPWR.t23 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X3 bus.t15 a_264_2813.t5 mod.t18 VPWR.t22 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X4 bus.t16 a_264_2813.t6 mod.t17 VPWR.t21 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X5 bus.t18 a_264_2813.t7 mod.t16 VPWR.t20 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X6 bus.t20 a_264_2813.t8 mod.t15 VPWR.t19 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X7 a_264_2813.t2 ctrl.t1 VPWR.t26 VPWR.t25 sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=1.5 l=0.15
-**devattr s=18600,724 d=9900,366
-X8 mod.t27 a_680_3582# bus.t25 VGND.t8 sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X9 mod.t14 a_264_2813.t9 bus.t17 VPWR.t18 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X10 mod.t13 a_264_2813.t10 bus.t0 VPWR.t17 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X11 a_680_3582# a_264_2813.t11 VGND.t1 VGND.t0 sky130_fd_pr__nfet_01v8 ad=0.435 pd=3.58 as=0 ps=0 w=1.5 l=0.15
-**devattr s=17400,716 d=17400,716
-X12 mod.t12 a_264_2813.t12 bus.t1 VPWR.t16 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=52200,1916 d=26100,958
-X13 bus.t27 a_680_3582# mod.t26 VGND.t7 sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X14 bus.t2 a_264_2813.t13 mod.t11 VPWR.t15 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X15 VPWR.t14 a_264_2813.t14 a_680_3582# VPWR.t13 sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0.2475 ps=1.83 w=1.5 l=0.15
-**devattr s=9900,366 d=18600,724
-X16 mod.t10 a_264_2813.t15 bus.t11 VPWR.t12 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X17 mod.t25 a_680_3582# bus.t23 VGND.t6 sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X18 mod.t9 a_264_2813.t16 bus.t9 VPWR.t11 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X19 mod.t8 a_264_2813.t17 bus.t10 VPWR.t10 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X20 mod.t24 a_680_3582# bus.t22 VGND.t5 sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X21 a_264_2813.t0 ctrl.t2 VGND.t10 VGND.t9 sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=1.5 l=0.15
-**devattr s=17400,716 d=17400,716
-X22 bus.t12 a_264_2813.t18 mod.t7 VPWR.t9 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X23 bus.t3 a_264_2813.t19 mod.t6 VPWR.t8 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X24 a_680_3582# a_264_2813.t20 VPWR.t7 VPWR.t6 sky130_fd_pr__pfet_01v8 ad=0.2475 pd=1.83 as=0 ps=0 w=1.5 l=0.15
-**devattr s=18600,724 d=9900,366
-X25 bus.t4 a_264_2813.t21 mod.t5 VPWR.t5 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X26 mod.t4 a_264_2813.t22 bus.t5 VPWR.t4 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=52200,1916
-X27 mod.t3 a_264_2813.t23 bus.t13 VPWR.t3 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X28 bus.t21 a_680_3582# mod.t23 VGND.t4 sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X29 bus.t7 a_264_2813.t24 mod.t2 VPWR.t2 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X30 bus.t24 a_680_3582# mod.t22 VGND.t3 sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=52200,1916 d=26100,958
-X31 bus.t26 a_680_3582# mod.t21 VGND.t2 sky130_fd_pr__nfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=52200,1916
-X32 mod.t1 a_264_2813.t25 bus.t8 VPWR.t1 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
-X33 mod.t0 a_264_2813.t26 bus.t6 VPWR.t0 sky130_fd_pr__pfet_01v8_lvt ad=0 pd=0 as=0 ps=0 w=4.5 l=0.35
-**devattr s=26100,958 d=26100,958
+X0 VPWR.t28 ctrl.t0 a_264_2813.t0 VPWR.t27 sky130_fd_pr__pfet_01v8 ad=0.465 pd=3.62 as=0.2475 ps=1.83 w=1.5 l=0.15
+X1 mod.t20 a_264_2813.t3 bus.t16 VPWR.t24 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X2 bus.t17 a_264_2813.t4 mod.t19 VPWR.t23 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X3 bus.t19 a_264_2813.t5 mod.t18 VPWR.t22 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X4 bus.t12 a_264_2813.t6 mod.t17 VPWR.t21 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X5 bus.t13 a_264_2813.t7 mod.t16 VPWR.t20 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X6 bus.t14 a_264_2813.t8 mod.t15 VPWR.t19 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X7 a_264_2813.t2 ctrl.t1 VPWR.t26 VPWR.t25 sky130_fd_pr__pfet_01v8 ad=0.2475 pd=1.83 as=0.465 ps=3.62 w=1.5 l=0.15
+X8 mod.t27 a_680_3582# bus.t21 VGND.t8 sky130_fd_pr__nfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X9 mod.t14 a_264_2813.t9 bus.t18 VPWR.t18 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X10 mod.t13 a_264_2813.t10 bus.t20 VPWR.t17 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X11 a_680_3582# a_264_2813.t11 VGND.t1 VGND.t0 sky130_fd_pr__nfet_01v8 ad=0.435 pd=3.58 as=0.435 ps=3.58 w=1.5 l=0.15
+X12 mod.t12 a_264_2813.t12 bus.t15 VPWR.t16 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=1.305 ps=9.58 w=4.5 l=0.35
+X13 bus.t22 a_680_3582# mod.t26 VGND.t7 sky130_fd_pr__nfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X14 bus.t0 a_264_2813.t13 mod.t11 VPWR.t15 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X15 VPWR.t14 a_264_2813.t14 a_680_3582# VPWR.t13 sky130_fd_pr__pfet_01v8 ad=0.465 pd=3.62 as=0.2475 ps=1.83 w=1.5 l=0.15
+X16 mod.t10 a_264_2813.t15 bus.t1 VPWR.t12 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X17 mod.t25 a_680_3582# bus.t26 VGND.t6 sky130_fd_pr__nfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X18 mod.t9 a_264_2813.t16 bus.t2 VPWR.t11 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X19 mod.t8 a_264_2813.t17 bus.t9 VPWR.t10 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X20 mod.t24 a_680_3582# bus.t27 VGND.t5 sky130_fd_pr__nfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X21 a_264_2813.t1 ctrl.t2 VGND.t10 VGND.t9 sky130_fd_pr__nfet_01v8 ad=0.435 pd=3.58 as=0.435 ps=3.58 w=1.5 l=0.15
+X22 bus.t7 a_264_2813.t18 mod.t7 VPWR.t9 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X23 bus.t8 a_264_2813.t19 mod.t6 VPWR.t8 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X24 a_680_3582# a_264_2813.t20 VPWR.t7 VPWR.t6 sky130_fd_pr__pfet_01v8 ad=0.2475 pd=1.83 as=0.465 ps=3.62 w=1.5 l=0.15
+X25 bus.t10 a_264_2813.t21 mod.t5 VPWR.t5 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X26 mod.t4 a_264_2813.t22 bus.t3 VPWR.t4 sky130_fd_pr__pfet_01v8_lvt ad=1.305 pd=9.58 as=0.6525 ps=4.79 w=4.5 l=0.35
+X27 mod.t3 a_264_2813.t23 bus.t4 VPWR.t3 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X28 bus.t25 a_680_3582# mod.t23 VGND.t4 sky130_fd_pr__nfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X29 bus.t5 a_264_2813.t24 mod.t2 VPWR.t2 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X30 bus.t24 a_680_3582# mod.t22 VGND.t3 sky130_fd_pr__nfet_01v8_lvt ad=0.6525 pd=4.79 as=1.305 ps=9.58 w=4.5 l=0.35
+X31 bus.t23 a_680_3582# mod.t21 VGND.t2 sky130_fd_pr__nfet_01v8_lvt ad=1.305 pd=9.58 as=0.6525 ps=4.79 w=4.5 l=0.35
+X32 mod.t1 a_264_2813.t25 bus.t11 VPWR.t1 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
+X33 mod.t0 a_264_2813.t26 bus.t6 VPWR.t0 sky130_fd_pr__pfet_01v8_lvt ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=0.35
 R0 ctrl.n1 ctrl.t0 317.212
 R1 ctrl.t0 ctrl.n0 317.212
 R2 ctrl.n1 ctrl.t1 317.185
@@ -128,8 +94,8 @@ R55 a_264_2813.n10 a_264_2813.t11 231.684
 R56 a_264_2813.n15 a_264_2813.n14 149.701
 R57 a_264_2813.n10 a_264_2813.n16 68.09
 R58 a_264_2813.n10 a_264_2813.n17 67.0628
-R59 a_264_2813.t0 a_264_2813.n18 62.2152
-R60 a_264_2813.n14 a_264_2813.t1 21.6705
+R59 a_264_2813.t1 a_264_2813.n18 62.2152
+R60 a_264_2813.n14 a_264_2813.t0 21.6705
 R61 a_264_2813.n14 a_264_2813.t2 21.6705
 R62 a_264_2813.n15 a_264_2813.n11 6.30606
 R63 a_264_2813.n18 a_264_2813.n10 5.22455
@@ -239,7 +205,7 @@ R166 VPWR VPWR.n38 0.368667
 R167 VPWR.n34 VPWR.n33 0.122375
 R168 VPWR.n36 VPWR.n32 0.106182
 R169 VPWR.n35 VPWR.n34 0.097375
-R170 bus.n10 bus.t1 53.5778
+R170 bus.n10 bus.t15 53.5778
 R171 bus.n18 bus.n17 47.2902
 R172 bus.n20 bus.n14 47.0712
 R173 bus.n19 bus.n15 47.0712
@@ -250,36 +216,36 @@ R177 bus.n12 bus.n7 47.0712
 R178 bus.n13 bus.n6 47.0712
 R179 bus.n23 bus.n22 47.0712
 R180 bus.n23 bus.n21 47.0712
-R181 bus.n1 bus.t26 20.5349
+R181 bus.n1 bus.t23 20.5349
 R182 bus.n4 bus.n3 16.6683
 R183 bus.n1 bus.n0 16.5083
 R184 bus.n4 bus.n2 16.5083
-R185 bus.n17 bus.t5 6.34828
-R186 bus.n17 bus.t3 6.34828
-R187 bus.n14 bus.t17 6.34828
-R188 bus.n14 bus.t20 6.34828
-R189 bus.n15 bus.t13 6.34828
-R190 bus.n15 bus.t2 6.34828
-R191 bus.n16 bus.t0 6.34828
-R192 bus.n16 bus.t18 6.34828
-R193 bus.n9 bus.t19 6.34828
-R194 bus.n9 bus.t4 6.34828
-R195 bus.n8 bus.t10 6.34828
-R196 bus.n8 bus.t16 6.34828
+R185 bus.n17 bus.t3 6.34828
+R186 bus.n17 bus.t8 6.34828
+R187 bus.n14 bus.t18 6.34828
+R188 bus.n14 bus.t14 6.34828
+R189 bus.n15 bus.t4 6.34828
+R190 bus.n15 bus.t0 6.34828
+R191 bus.n16 bus.t20 6.34828
+R192 bus.n16 bus.t13 6.34828
+R193 bus.n9 bus.t16 6.34828
+R194 bus.n9 bus.t10 6.34828
+R195 bus.n8 bus.t9 6.34828
+R196 bus.n8 bus.t12 6.34828
 R197 bus.n7 bus.t6 6.34828
-R198 bus.n7 bus.t12 6.34828
-R199 bus.n6 bus.t9 6.34828
-R200 bus.n6 bus.t15 6.34828
-R201 bus.n22 bus.t11 6.34828
-R202 bus.n22 bus.t14 6.34828
-R203 bus.n21 bus.t8 6.34828
-R204 bus.n21 bus.t7 6.34828
-R205 bus.n3 bus.t25 3.86717
+R198 bus.n7 bus.t7 6.34828
+R199 bus.n6 bus.t2 6.34828
+R200 bus.n6 bus.t19 6.34828
+R201 bus.n22 bus.t1 6.34828
+R202 bus.n22 bus.t17 6.34828
+R203 bus.n21 bus.t11 6.34828
+R204 bus.n21 bus.t5 6.34828
+R205 bus.n3 bus.t21 3.86717
 R206 bus.n3 bus.t24 3.86717
-R207 bus.n0 bus.t22 3.86717
-R208 bus.n0 bus.t21 3.86717
-R209 bus.n2 bus.t23 3.86717
-R210 bus.n2 bus.t27 3.86717
+R207 bus.n0 bus.t27 3.86717
+R208 bus.n0 bus.t25 3.86717
+R209 bus.n2 bus.t26 3.86717
+R210 bus.n2 bus.t22 3.86717
 R211 bus.n26 bus.n25 0.6825
 R212 bus.n13 bus.n12 0.1605
 R213 bus.n12 bus.n11 0.1605
@@ -352,90 +318,93 @@ R279 mod.n20 mod.n19 0.0805
 R280 mod mod.n27 0.0527222
 R281 mod.n27 mod 0.0527222
 R282 mod.n5 mod.n2 0.034875
-R283 VGND.n17 VGND.n7 81177.1
-R284 VGND.n11 VGND.n8 6674.82
-R285 VGND.n15 VGND.n8 6674.82
-R286 VGND.n11 VGND.n9 6674.82
-R287 VGND.n15 VGND.n9 6674.82
-R288 VGND.n27 VGND.n5 2595.76
-R289 VGND.n28 VGND.n5 2595.76
-R290 VGND.n32 VGND.n3 2595.76
-R291 VGND.n20 VGND.n4 1680.29
-R292 VGND.n29 VGND.n4 1680.29
-R293 VGND.n27 VGND.n20 915.471
-R294 VGND.n20 VGND.n3 915.471
-R295 VGND.n29 VGND.n28 915.471
-R296 VGND.n30 VGND.n29 915.471
-R297 VGND.t0 VGND.n18 681.569
-R298 VGND.t0 VGND.n19 681.569
-R299 VGND.n19 VGND.t9 681.569
-R300 VGND.n18 VGND.n17 677.255
-R301 VGND.n17 VGND.n16 653.227
-R302 VGND.n32 VGND.n31 543.638
-R303 VGND.n12 VGND.n10 433.695
-R304 VGND.n14 VGND.n10 433.695
-R305 VGND.n13 VGND.n12 433.695
-R306 VGND.n14 VGND.n13 433.695
-R307 VGND.t2 VGND.n7 388.878
-R308 VGND.n16 VGND.t3 388.878
-R309 VGND.n30 VGND.n2 292.5
-R310 VGND.n28 VGND.n6 292.5
-R311 VGND.n28 VGND.t0 292.5
-R312 VGND.n27 VGND.n26 292.5
-R313 VGND.t0 VGND.n27 292.5
-R314 VGND.n3 VGND.n1 292.5
-R315 VGND.t9 VGND.n3 292.5
-R316 VGND.t5 VGND.t2 279.642
-R317 VGND.t4 VGND.t5 279.642
-R318 VGND.t6 VGND.t4 279.642
-R319 VGND.t6 VGND.t7 279.642
-R320 VGND.t7 VGND.t8 279.642
-R321 VGND.t8 VGND.t3 279.642
-R322 VGND.n31 VGND.n30 207.823
-R323 VGND.n33 VGND.n2 168.66
-R324 VGND.n21 VGND.n6 168.66
-R325 VGND.n34 VGND.n33 110.314
-R326 VGND.n24 VGND.n23 109.177
-R327 VGND.n25 VGND.n24 108.424
-R328 VGND.n22 VGND.n21 108.424
-R329 VGND.n24 VGND.n4 83.5719
-R330 VGND.n19 VGND.n4 83.5719
-R331 VGND.n33 VGND.n32 83.5719
-R332 VGND.n21 VGND.n5 83.5719
-R333 VGND.n18 VGND.n5 83.5719
+R283 VGND.n19 VGND.n18 81177.1
+R284 VGND.n17 VGND.n13 6674.82
+R285 VGND.n21 VGND.n13 6674.82
+R286 VGND.n17 VGND.n14 6674.82
+R287 VGND.n21 VGND.n14 6674.82
+R288 VGND.n29 VGND.n5 2595.76
+R289 VGND.n30 VGND.n5 2595.76
+R290 VGND.n34 VGND.n3 2595.76
+R291 VGND.n9 VGND.n4 1680.29
+R292 VGND.n31 VGND.n4 1680.29
+R293 VGND.n29 VGND.n9 915.471
+R294 VGND.n9 VGND.n3 915.471
+R295 VGND.n31 VGND.n30 915.471
+R296 VGND.n32 VGND.n31 915.471
+R297 VGND.t0 VGND.n7 681.569
+R298 VGND.t0 VGND.n8 681.569
+R299 VGND.n8 VGND.t9 681.569
+R300 VGND.n19 VGND.n7 677.255
+R301 VGND.n20 VGND.n19 653.227
+R302 VGND.n34 VGND.n33 543.638
+R303 VGND.n16 VGND.n12 433.695
+R304 VGND.n22 VGND.n12 433.695
+R305 VGND.n18 VGND.t2 388.878
+R306 VGND.n20 VGND.t3 388.878
+R307 VGND.n32 VGND.n2 292.5
+R308 VGND.n30 VGND.n6 292.5
+R309 VGND.n30 VGND.t0 292.5
+R310 VGND.n29 VGND.n28 292.5
+R311 VGND.t0 VGND.n29 292.5
+R312 VGND.n3 VGND.n1 292.5
+R313 VGND.t9 VGND.n3 292.5
+R314 VGND.t2 VGND.t5 279.642
+R315 VGND.t5 VGND.t4 279.642
+R316 VGND.t4 VGND.t6 279.642
+R317 VGND.t6 VGND.t7 279.642
+R318 VGND.t7 VGND.t8 279.642
+R319 VGND.t8 VGND.t3 279.642
+R320 VGND.n16 VGND.n15 235.637
+R321 VGND.n23 VGND.n22 222.119
+R322 VGND.n33 VGND.n32 207.823
+R323 VGND.n35 VGND.n2 168.66
+R324 VGND.n10 VGND.n6 168.66
+R325 VGND.n36 VGND.n35 110.314
+R326 VGND.n26 VGND.n25 109.177
+R327 VGND.n27 VGND.n26 108.424
+R328 VGND.n24 VGND.n10 108.424
+R329 VGND.n26 VGND.n4 83.5719
+R330 VGND.n8 VGND.n4 83.5719
+R331 VGND.n35 VGND.n34 83.5719
+R332 VGND.n10 VGND.n5 83.5719
+R333 VGND.n7 VGND.n5 83.5719
 R334 VGND.n0 VGND.t1 64.0037
-R335 VGND.n36 VGND.t10 62.2777
-R336 VGND.n22 VGND.n0 61.835
-R337 VGND.n31 VGND.t9 61.2599
-R338 VGND.n23 VGND.n6 59.4829
-R339 VGND.n23 VGND.n2 59.4829
-R340 VGND.n13 VGND.n9 41.7862
-R341 VGND.n9 VGND.t6 41.7862
-R342 VGND.n10 VGND.n8 41.7862
-R343 VGND.t6 VGND.n8 41.7862
-R344 VGND.n15 VGND.n14 36.563
-R345 VGND.n16 VGND.n15 36.563
-R346 VGND.n12 VGND.n11 36.563
-R347 VGND.n11 VGND.n7 36.563
-R348 VGND.n26 VGND.n22 6.09207
-R349 VGND.n26 VGND.n25 6.09207
-R350 VGND.n25 VGND.n1 6.09207
-R351 VGND.n34 VGND.n1 4.20291
-R352 VGND.n37 VGND.n36 1.7055
-R353 VGND.n35 VGND.n34 1.03383
-R354 VGND.n37 VGND 0.829267
-R355 VGND.n36 VGND.n35 0.5005
-R356 VGND.n35 VGND.n0 0.2005
-R357 VGND VGND.n37 0.024
-C0 VPWR ctrl 1.07036f
-C1 mod ctrl 0.052081f
-C2 ctrl bus 0.007757f
-C3 mod VPWR 1.79432f
-C4 VPWR bus 1.99929f
-C5 mod bus 23.4702f
+R335 VGND.n38 VGND.t10 62.2777
+R336 VGND.n33 VGND.t9 61.2599
+R337 VGND.n25 VGND.n6 59.4829
+R338 VGND.n25 VGND.n2 59.4829
+R339 VGND.n14 VGND.n12 41.7862
+R340 VGND.t6 VGND.n14 41.7862
+R341 VGND.n13 VGND.n11 41.7862
+R342 VGND.t6 VGND.n13 41.7862
+R343 VGND.n22 VGND.n21 36.563
+R344 VGND.n21 VGND.n20 36.563
+R345 VGND.n17 VGND.n16 36.563
+R346 VGND.n18 VGND.n17 36.563
+R347 VGND.n23 VGND.n11 17.5459
+R348 VGND.n24 VGND.n23 17.4565
+R349 VGND.n28 VGND.n24 6.09207
+R350 VGND.n28 VGND.n27 6.09207
+R351 VGND.n27 VGND.n1 6.09207
+R352 VGND.n36 VGND.n1 4.20291
+R353 VGND.n15 VGND.n11 4.02782
+R354 VGND.n39 VGND.n38 1.7055
+R355 VGND.n37 VGND.n36 1.03383
+R356 VGND.n15 VGND.n0 0.912905
+R357 VGND.n39 VGND 0.829267
+R358 VGND.n38 VGND.n37 0.5005
+R359 VGND.n37 VGND.n0 0.2005
+R360 VGND VGND.n39 0.024
+C0 mod bus 23.4702f
+C1 VPWR ctrl 1.07021f
+C2 VPWR mod 1.79432f
+C3 mod ctrl 0.052081f
+C4 a_680_3582# bus 0.687796f
+C5 VPWR a_680_3582# 1.08351f
 C6 a_680_3582# ctrl 0.167494f
-C7 VPWR a_680_3582# 1.08351f
-C8 mod a_680_3582# 1.3552f
-C9 a_680_3582# bus 0.687796f
+C7 mod a_680_3582# 1.35103f
+C8 VPWR bus 1.99929f
+C9 bus ctrl 0.007757f
 .ends
 
